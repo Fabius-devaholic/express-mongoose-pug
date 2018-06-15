@@ -34,36 +34,12 @@ router.route('/books')
     })
   })
 
-router.route('/book/:title')
-  .get((req, res) => {
-    new Promise((resolve, reject) => {
-      Book.findOne({
-        title: req.params.title
-      }, (err, book) => {
-        if (err) reject(err)
-
-        resolve(book)
-      })
-    }).then(book => {
-      res.render('book', {
-        pageTitle: book.title,
-        book: book
-      })
-    }).catch(err => {
-      res.status(500).json({ err: err })
-    }).finally(() => {
-      res.end()
-    })
-  })
-
 router.route('/book/new')
   .get((req, res) => {
     res.render('bookNew')
     res.end()
   })
 
-  // title: String
-  // author: String
   .post(upload.fields([
     {
       name: 'thumbnail',
@@ -80,15 +56,37 @@ router.route('/book/new')
       author: req.body.author,
       file: req.files['file'][0].path
     })
-
     new Promise((resolve, reject) => {
       book.save((err, book) => {
         if (err) reject(err)
 
-        resolve()
+        resolve(book)
       })
-    }).then(() => {
-      res.redirect('/books')
+    }).then(book => {
+      res.json(book)
+    }).catch(err => {
+      res.status(500).json({ err: err })
+    }).finally(() => {
+      res.end()
+    })
+  })
+
+
+router.route('/book/:title')
+  .get((req, res) => {
+    new Promise((resolve, reject) => {
+      Book.findOne({
+        title: req.params.title
+      }, (err, book) => {
+        if (err) reject(err)
+
+        resolve(book)
+      })
+    }).then(book => {
+      res.render('book', {
+        pageTitle: book.title,
+        book: book
+      })
     }).catch(err => {
       res.status(500).json({ err: err })
     }).finally(() => {
