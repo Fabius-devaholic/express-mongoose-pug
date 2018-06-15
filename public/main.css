@@ -1,0 +1,28 @@
+.menu a {
+  padding: 5px 10px;
+  background: #609;
+  color: #fff;
+  margin: 0 20px;
+  border-radius: 5px;
+}
+table, tr, td {
+  border: 1px solid #f4f4f4;
+  border-collapse: collapse;
+}
+
+table {
+  width: 100%;
+}
+
+td {
+  padding: 10px 20px;
+}
+
+table p, table h4 {
+  margin: 0;
+}
+
+embed {
+  display: block;
+  margin: auto;
+}

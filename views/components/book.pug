@@ -1,0 +1,13 @@
+//-book.pug
+//-thumbnail: String
+//-title: String
+//-author: String
+//-file: String
+
+tr
+  td
+    img(src=book.thumbnail)
+  td
+    a(href='book/' + book.title) #{book.title}
+  td
+    p= book.author

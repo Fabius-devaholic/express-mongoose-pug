@@ -1,0 +1,28 @@
+//page.pug
+
+doctype html
+html(lang="en")
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    link(rel='stylesheet', href='/static/main.css')
+    if pageTitle
+      title= pageTitle
+    else
+      title Presentation
+  body
+    header
+      p this is header
+      div.menu
+        a(href='/') home
+        a(href='/books') books
+
+    block content
+      p put your content here
+
+    footer
+      p this is footer
+
+    block scripts
+      script(src='/static/jquery.js')
+      script(src='/static/main.js')
