@@ -14,6 +14,6 @@ vi .env-cmdrc
 ```
 
 ### References
-[express](https://github.com/expressjs/express)
-[pug engine](https://github.com/pugjs/pug)
+[express](https://github.com/expressjs/express),
+[pug engine](https://github.com/pugjs/pug),
 [mongoose](https://github.com/Automattic/mongoose)
