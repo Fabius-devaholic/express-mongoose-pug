@@ -1,5 +1,6 @@
 extends page
 
 block content
-  h1= book.title
-  embed(src='/' + book.file, width='80%', height='680', alt='pdf', pluginspage='http://www.adobe.com/products/acrobat/readstep2.html')
+  div.container
+    h1= book.title
+    embed(src='/' + book.file, width='100%', height='680', alt='pdf', pluginspage='http://www.adobe.com/products/acrobat/readstep2.html')

@@ -1,7 +1,6 @@
 *, *::before, *::after {
   box-sizing: border-box;
 }
-
 body {
   margin: 0;
   font-family: sans-serif;
@@ -9,34 +8,30 @@ body {
   line-height: normal;
   font-weight: lighter;
 }
-
 a {
   text-decoration: none;
 }
-
 .container {
   max-width: 1240px;
   margin: auto;
   padding: 0 20px;
 }
-
 header, footer {
   background: #f4f4f4;
   padding: 1rem 0;
   text-align: center;
+  a {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    min-width: 5rem;
+    font-weight: bold;
+    text-transform: capitalize;
+  }
 }
-
-header a, footer a {
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  min-width: 5rem;
-  font-weight: bold;
-  text-transform: capitalize;
-}
-
 .site-content {
   min-height: calc(100vh - 60px - 50px - 21px);
 }
+
 
 .menu a {
   padding: 5px 10px;
@@ -45,7 +40,6 @@ header a, footer a {
   margin: 0 20px;
   border-radius: 5px;
 }
-
 table, tr, td {
   border: 1px solid #f4f4f4;
   border-collapse: collapse;

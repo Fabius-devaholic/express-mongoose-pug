@@ -9,7 +9,7 @@ $(function() {
     let file = $(e.target).find('input[name="file"]')
     let formData = new FormData()
 
-      // Add the uploaded image content to the form data collection
+    // Add the uploaded image content to the form data collection
     if (thumbnail.length > 0) {
       formData.append('thumbnail', thumbnail.get(0).files[0])
     } else {
@@ -30,7 +30,7 @@ $(function() {
       processData: false,
       dataType: 'json'
     }).done((data, textStatus, xhr) => {
-      window.location.href = '/books'
+      console.log('done', data)
     }).fail(err => {
       console.log('fail', err)
     })

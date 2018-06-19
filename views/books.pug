@@ -1,18 +1,19 @@
 extends page
 
 block content
-  p We have list of books
-  p Want a new book? #[a(href='book/new') Click here!]
+  div.container
+    p We have list of books
+    p Want a new book? #[a(href='book/new') Click here!]
 
-  table
-    thead
-      tr
-        td
-          h4 Thumbnail
-        td
-          h4 Title
-        td
-          h4 Author
-    tbody
-      each book in books
-        include components/book
+    table
+      thead
+        tr
+          td
+            h4 Thumbnail
+          td
+            h4 Title
+          td
+            h4 Author
+      tbody
+        each book in books
+          include components/book

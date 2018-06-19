@@ -1,23 +1,24 @@
 extends page
 
 block content
-  p New Book Info
-  form(method='post', role='form', enctype='multipart/form-data').book-new
-    p
-      label(for='thumbnail') Thumbnail
-    p
-      input(type='file', name='thumbnail', accept='image/*')#thumbnail
-    p
-      label(for='title') Title
-    p
-      input(type='text', name='title')#title
-    p
-      label(for='author') Author
-    p
-      input(type='text', name='author')#author
-    p
-      label(for='file') File
-    p
-      input(type='file', name='file', accept='.pdf, .txt, .epub')#file
-    p
-      input(type='submit', value='Click to submit')
+  div.container
+    p New Book Info
+    form(method='post', role='form', enctype='multipart/form-data').book-new
+      p
+        label(for='thumbnail') Thumbnail
+      p
+        input(type='file', name='thumbnail', accept='image/*')#thumbnail
+      p
+        label(for='title') Title
+      p
+        input(type='text', name='title')#title
+      p
+        label(for='author') Author
+      p
+        input(type='text', name='author')#author
+      p
+        label(for='file') File
+      p
+        input(type='file', name='file', accept='.pdf, .txt, .epub')#file
+      p
+        input(type='submit', value='Click to submit')

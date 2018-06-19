@@ -5,24 +5,26 @@ html(lang="en")
   head
     meta(charset='utf-8')
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
-    link(rel='stylesheet', href='/static/main.css')
+    link(rel='stylesheet', type='text/css', href='/public/main.css')
     if pageTitle
       title= pageTitle
     else
       title Presentation
   body
     header
-      p this is header
-      div.menu
-        a(href='/') home
-        a(href='/books') books
+      div.container
+        div.menu
+          a(href='/') home
+          a(href='/books') books
 
-    block content
-      p put your content here
+    div.site-content
+      block content
+        p put your content here
 
     footer
-      p this is footer
+      div.container
+        span #[em Hieu Tran &copy; 2018]
 
     block scripts
-      script(src='/static/jquery.js')
-      script(src='/static/main.js')
+      script(src='/public/jquery.js')
+      script(src='/public/main.js')
